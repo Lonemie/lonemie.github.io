@@ -6,16 +6,25 @@
 	<style>
 	  body {
 	    width: 100vw;
-	max-height: 1920px;
+	    height: 100vh;
 	  }
 	  .header {
 	    width: 100%;
-		height: 120px;
 		position: sticky;
 		top: 0;
 		left: 0;
 		background: #ffffff;
 		box-shadow: 0 10px 30px #d8d8d8;
+	  }
+	  @media(min-width:1080px){
+	    body {
+	      height: 150px;
+	    }
+	  }
+	  @media(min-width:1200px){
+	    body {
+	      height: 100px;
+	    }
 	  }
 	  .icon {
 	    position: relative;
