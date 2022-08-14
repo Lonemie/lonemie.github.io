@@ -1,0 +1,166 @@
+body {
+  background: #ffffff;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+/*顶部导航栏*/
+.header {
+  width: 100%;
+  height: 50px;
+  background: #ffffff;
+  box-shadow: 0 0 20px #00000033;
+  position: fixed;
+  top: -16px;
+  right: 0px;
+  list-style-type: none;
+  overflow: hidden;
+  z-index: 100;
+}
+.header li{
+  float: left;
+}
+.menu {
+  width: 50px;
+  height: 50px;
+  background: url(/image/menu_gray.png);
+  background-size: contain;
+}
+.menu:active {
+  background: url(/image/menu_white.png) #abcdef;
+  background-size: contain;
+}
+.logo {
+  width: 50px;
+  height: 50px;
+  background: url(/image/logo_gray.png);
+  background-size: contain;
+}
+.logo:active {
+  background: url(/image/logo_white.png) #abcdef;
+  background-size: contain;
+}
+.search {
+  width: 50px;
+  height: 50px;
+  background: url(/image/search_gray.png);
+  background-size: contain;
+}
+.search:active {
+  background: url(/image/search_white.png) #abcdef;
+  background-size: contain;
+}
+/*内容*/
+.empty-header {
+  width: 100%;
+  height: 50px;
+  position: static;
+  top: 0px;
+  right: 0px;
+}
+.hyperlink-box {
+  background: #99999999;
+  box-shadow: 0 0 20px #00000033;
+}
+.hyperlink-box .hyperlink {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.hyperlink-box .icon {
+  background: #999999;
+}
+a {
+  text-decoration-line: none;
+}
+.hyperlink-box .text {
+  color: #ffffff;
+  line-height: 70px;
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  text-align: center;
+}
+.bilibili{
+  background: #fb729999;
+}
+.bilibili .icon {
+  background: url(/image/bilibili_white.png) #fb7299;
+  background-size: contain;
+}
+.douyin{
+  background: #270d1e99;
+}
+.douyin .icon {
+  background: url(/image/tiktok_white.png) #270d1e;
+  background-size: contain;
+}
+/*底部信息栏*/
+.footer {
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+  background: #ffffff;
+  box-shadow: 0 0 20px #00000033;
+  position: static;
+  right: 0;
+  list-style-type: none;
+  overflow: hidden;
+}
+.footer .title {
+  color: #4d4d4d;
+  margin: 10px 10px;
+  padding: 10px 0;
+  font-size: 30px;
+  line-height: 50px;
+  letter-spacing: 0.5px;
+}
+.footer .list {
+  position: relative;
+  width: 100%;
+  margin: 0 0 10px 0;
+  left: 0;
+  right: 0;
+}
+.footer .list span {
+  margin: 0 10px;
+}
+.footer .list span a {
+  color: #999999;
+}
+/*设备适应*/
+/*手机*/
+@media screen and (min-width: 360px) and (max-width: 480px) {
+  .detect::after {
+	  content: "手机";
+  }
+  p {
+    margin: 20px;
+  }
+  .hyperlink-box {
+    margin: 20px 20px;
+    height: 70px;
+  }
+  .hyperlink-box .icon {
+    width: 70px;
+	  height: 70px;
+	  float: left;
+  }
+  .hyperlink-box .text {
+	  margin: 0 0 0 20px;
+    height: 70px;
+	  float: left;
+	  overflow: hidden;
+  }
+}
+/*平板*/
+@media screen and (min-width: 481px) and (max-width: 600px) {
+  .detect::after {
+    content: "平板";
+  }
+}
+/*电脑*/
+@media screen and (min-width: 601px) /*and (max-width: 600px)*/ {
+  .detect::after {
+	content: "电脑";
+  }
+}
